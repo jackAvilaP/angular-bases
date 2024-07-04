@@ -1,0 +1,5 @@
+@layer component {
+  dd {
+    @apply font-bold text-2xl;
+  }
+}

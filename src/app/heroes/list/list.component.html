@@ -1,0 +1,35 @@
+<h3 class="my-2 font-bold text-lg">List to Heros</h3>
+
+
+<h3
+*ngIf="nameDelete; else delete"
+class="my-2 font-bold text-lg"
+>
+Eliminted hero  <small class="text-error">{{nameDelete}}</small>
+</h3>
+
+<ng-template #delete>
+  <h3 class="my-2 font-bold text-lg">
+    You haven't eliminated hero
+  </h3>
+</ng-template>
+
+<button
+*ngIf="heroNames.length > 0"
+(click)="deleteHero()"
+type="button"
+class="btn btn-outline btn-error mb-4"
+>
+  Delete last Hero
+</button>
+
+
+
+<ul class="border rounded-md">
+  <li
+    *ngFor="let name of heroNames"
+    class="border-b p-1"
+    >
+      {{name}}
+  </li>
+</ul>
