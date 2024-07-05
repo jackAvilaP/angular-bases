@@ -1,0 +1,13 @@
+<h1>DBZ Person</h1>
+<hr>
+
+<div class="flex flex-row  gap-2">
+  <div class="w-[50%]">
+    <dbz-list [characterList]="characters"
+      (onIndexCharacter)="onDeleteCharcter($event)"></dbz-list>
+  </div>
+  <div class="w-[50%]">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+  </div>
+</div>

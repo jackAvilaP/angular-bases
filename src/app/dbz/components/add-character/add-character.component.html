@@ -1,0 +1,11 @@
+<form (ngSubmit)="emirCharacter()" class="flex flex-col justify-center gap-4 p-2">
+  <h4>Add person</h4>
+
+  <input type="text" [(ngModel)]="character.name" name="name" class="input input-bordered input-sm w-full "
+    placeholder="name person" />
+
+  <input type="number" [(ngModel)]="character.power" name="power" class="input input-sm w-full" placeholder="power" />
+
+  <button type="submit" class="btn btn-sm btn-primary  text-white">Add</button>
+
+</form>
